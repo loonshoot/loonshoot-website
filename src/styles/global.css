@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@theme {
+  /* 80s Neon Colors */
+  --color-neon-pink: #FE0170;
+  --color-neon-yellow: #FFC403;
+  --color-neon-green: rgb(81, 247, 43);
+  --color-neon-cyan: #00F3FF;
+  --color-neon-purple: #BF00FF;
+  --color-neon-orange: #FF6600;
+  --color-electric-blue: #0080FF;
+  --color-hot-magenta: #FF00AA;
+  --color-cream: #FFF8E7;
+  --color-dark: #2D2D2D;
+  --color-charcoal: #1A1A1A;
+
+  /* Brand Colors */
+  --color-airank-green: rgb(81, 247, 43);
+  --color-outrun-pink: #FE0170;
+  --color-outrun-yellow: #FFC403;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+
+@layer base {
+  * {
+    border-color: #2D2D2D;
+  }
+
+  body {
+    background-color: #FFF8E7;
+    color: #2D2D2D;
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-shadow-chunky {
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .text-shadow-thick {
+    text-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .box-brutal {
+    border: 5px solid #2D2D2D;
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.15);
+    transition: all 0.15s ease;
+  }
+
+  .box-brutal:hover {
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.15);
+    transform: translate(5px, 5px);
+  }
+
+  .box-wonky {
+    border: 5px solid #2D2D2D;
+    box-shadow: 8px 12px 0 rgba(0, 0, 0, 0.15);
+    transform: rotate(-1deg);
+    transition: all 0.15s ease;
+  }
+
+  .box-wonky:hover {
+    box-shadow: 4px 6px 0 rgba(0, 0, 0, 0.15);
+    transform: rotate(0deg) translate(4px, 6px);
+  }
+
+  .rotate-slight {
+    transform: rotate(-2deg);
+  }
+
+  .rotate-slight-reverse {
+    transform: rotate(2deg);
+  }
+
+  /* 80s Patterns */
+  .pattern-grid {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.05) 2px, transparent 2px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.05) 2px, transparent 2px);
+    background-size: 40px 40px;
+  }
+
+  .pattern-diagonal {
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(0, 0, 0, 0.05) 10px,
+      rgba(0, 0, 0, 0.05) 20px
+    );
+  }
+
+  .pattern-dots {
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 2px, transparent 2px);
+    background-size: 30px 30px;
+  }
+
+  .pattern-waves {
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        transparent 20px,
+        rgba(0, 0, 0, 0.05) 20px,
+        rgba(0, 0, 0, 0.05) 22px
+      );
+  }
+
+  .pattern-zigzag {
+    background-image:
+      linear-gradient(135deg, #FFC403 25%, transparent 25%),
+      linear-gradient(225deg, #FFC403 25%, transparent 25%),
+      linear-gradient(45deg, #FE0170 25%, transparent 25%),
+      linear-gradient(315deg, #FE0170 25%, transparent 25%),
+      linear-gradient(135deg, #00F3FF 25%, transparent 25%),
+      linear-gradient(225deg, #00F3FF 25%, transparent 25%);
+    background-position:
+      0 0,
+      20px 0,
+      20px -20px,
+      0 40px,
+      40px 20px,
+      60px 20px;
+    background-size: 40px 40px;
+    background-repeat: repeat;
+    animation: zigzag-scroll 10s linear infinite;
+  }
+
+  @keyframes zigzag-scroll {
+    0% {
+      background-position:
+        0 0,
+        20px 0,
+        20px -20px,
+        0 40px,
+        40px 20px,
+        60px 20px;
+    }
+    100% {
+      background-position:
+        0 40px,
+        20px 40px,
+        20px 20px,
+        0 80px,
+        40px 60px,
+        60px 60px;
+    }
+  }
+}

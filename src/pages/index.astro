@@ -1,0 +1,237 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Loonshoot - Digital Products & Exciting Projects">
+  <!-- Fixed Navigation Bar -->
+  <nav class="fixed top-0 left-0 right-0 bg-charcoal border-b-5 border-dark z-50 py-4 px-6">
+    <div class="container mx-auto max-w-7xl flex items-center gap-4">
+      <img src="/images/loonshoot-logo.png" srcset="/images/loonshoot-logo@2x.png 2x" alt="Loonshoot Logo" class="h-12 w-auto" />
+      <h1 class="text-3xl md:text-4xl font-bold text-cream">loonshoot.</h1>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen bg-charcoal pattern-zigzag py-12 px-6 pt-32">
+    <div class="container mx-auto max-w-7xl">
+
+      <!-- Main Hero Content -->
+      <div class="mb-20">
+        <div>
+          <h2 class="text-5xl md:text-7xl font-bold mb-6 leading-tight text-shadow-thick">
+            <span class="block text-neon-yellow rotate-slight inline-block bg-charcoal px-4 py-2">Digital</span>
+            <span class="block text-neon-pink bg-charcoal px-4 py-2">Products</span>
+            <span class="block text-neon-cyan rotate-slight-reverse inline-block bg-charcoal px-4 py-2">& Wild Ideas</span>
+          </h2>
+
+          <p class="text-2xl md:text-3xl mb-8 text-cream bg-charcoal px-4 py-2 inline-block">
+            Building stupid things other people suggested I didn't build 🦙
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#apps" class="box-brutal bg-neon-pink text-cream px-8 py-4 text-xl font-bold text-center">
+              See the Apps
+            </a>
+            <a href="#about" class="box-wonky bg-neon-cyan text-dark px-8 py-4 text-xl font-bold text-center">
+              Meet the Loon
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apps Portfolio Section -->
+  <section id="apps" class="py-20 bg-neon-purple pattern-dots px-6">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-5xl md:text-7xl font-bold mb-4 text-shadow-thick rotate-slight-reverse inline-block text-cream">
+        The Apps
+      </h2>
+      <p class="text-2xl mb-16 text-cream">Things I've built that people actually use</p>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Outrun -->
+        <div class="box-brutal p-8 bg-dark">
+          <div class="mb-6">
+            <img src="https://cdn.getoutrun.com/website/brand/logo-horizontal.svg" alt="Outrun" class="h-6 w-auto mb-2 mt-6" />
+            <p class="sr-only">Outrun</p>
+          </div>
+          <p class="text-xl mb-6 leading-relaxed text-cream">
+            The data platform for syncing apps, migrating CRMs, and fixing duplicates. Operate like a team 10x your size.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="bg-neon-pink text-cream px-3 py-2 text-sm font-bold border-2 border-cream">DATA</span>
+            <span class="bg-neon-yellow text-dark px-3 py-2 text-sm font-bold border-2 border-cream">INTEGRATION</span>
+            <span class="bg-cream text-dark px-3 py-2 text-sm font-bold border-2 border-cream">CRM</span>
+          </div>
+          <a href="https://getoutrun.com" target="_blank" rel="noopener" class="inline-block bg-neon-pink text-cream px-6 py-3 font-bold text-lg border-5 border-cream box-shadow-[5px_5px_0_rgba(255,248,231,0.3)] hover:translate-x-[5px] hover:translate-y-[5px] hover:shadow-none transition-all">
+            Visit Outrun →
+          </a>
+        </div>
+
+        <!-- AI Rank -->
+        <div class="box-wonky p-8 bg-dark">
+          <div class="mb-6">
+            <img src="https://getairank.com/logo-light.svg" alt="AI Rank" class="h-12 w-auto mb-2" />
+            <p class="sr-only">AI Rank</p>
+          </div>
+          <p class="text-xl mb-6 leading-relaxed text-cream">
+            AI-powered SEO and content optimization. Rank higher, create better, dominate search results.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="bg-neon-green text-dark px-3 py-2 text-sm font-bold border-2 border-cream">AI</span>
+            <span class="bg-neon-cyan text-dark px-3 py-2 text-sm font-bold border-2 border-cream">SEO</span>
+            <span class="bg-cream text-dark px-3 py-2 text-sm font-bold border-2 border-cream">CONTENT</span>
+          </div>
+          <a href="https://getairank.com" target="_blank" rel="noopener" class="inline-block bg-neon-green text-dark px-6 py-3 font-bold text-lg border-5 border-cream box-shadow-[5px_5px_0_rgba(255,248,231,0.3)] hover:translate-x-[5px] hover:translate-y-[5px] hover:shadow-none transition-all">
+            Visit AI Rank →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-neon-pink pattern-diagonal px-6">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-5xl md:text-7xl font-bold mb-4 text-shadow-thick text-cream">
+        Let's Collaborate
+      </h2>
+      <p class="text-2xl mb-16 text-cream">I love to collaborate on projects. These are the types of projects I want to hear from you about.</p>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Digital Products -->
+        <div class="box-brutal bg-dark p-6 rotate-slight">
+          <div class="mb-4">
+            <svg class="w-16 h-16 text-neon-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 text-shadow-chunky text-cream">Digital Products</h3>
+          <p class="text-cream">SaaS apps, web platforms, mobile experiences that users actually want to use.</p>
+        </div>
+
+        <!-- Automation -->
+        <div class="box-wonky bg-dark p-6">
+          <div class="mb-4">
+            <svg class="w-16 h-16 text-neon-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 text-shadow-chunky text-cream">Automation</h3>
+          <p class="text-cream">Workflows, integrations, and systems that do the boring stuff while you sleep.</p>
+        </div>
+
+        <!-- Machine Learning -->
+        <div class="box-brutal bg-dark p-6 rotate-slight-reverse">
+          <div class="mb-4">
+            <svg class="w-16 h-16 text-neon-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 text-shadow-chunky text-cream">Machine Learning</h3>
+          <p class="text-cream">AI models, predictions, and intelligent systems that actually make sense.</p>
+        </div>
+
+        <!-- Data & Analytics -->
+        <div class="box-wonky bg-dark p-6">
+          <div class="mb-4">
+            <svg class="w-16 h-16 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 text-shadow-chunky text-cream">Data & Analytics</h3>
+          <p class="text-cream">Data warehouses, pipelines, and dashboards that reveal the truth.</p>
+        </div>
+
+        <!-- Integration -->
+        <div class="box-brutal bg-dark p-6 rotate-slight">
+          <div class="mb-4">
+            <svg class="w-16 h-16 text-neon-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 text-shadow-chunky text-cream">Integration</h3>
+          <p class="text-cream">Connect your systems, sync your data, unify your chaos.</p>
+        </div>
+
+        <!-- Strategy -->
+        <div class="box-wonky bg-dark p-6">
+          <div class="mb-4">
+            <svg class="w-16 h-16 text-neon-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 text-shadow-chunky text-cream">Strategy</h3>
+          <p class="text-cream">Product roadmaps, tech decisions, and making the right bets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-neon-yellow pattern-waves px-6">
+    <div class="container mx-auto max-w-5xl">
+      <h2 class="text-5xl md:text-7xl font-bold mb-12 text-shadow-thick rotate-slight inline-block text-dark">
+        Meet the Loon
+      </h2>
+
+      <div class="box-brutal bg-dark p-8 md:p-12">
+        <p class="text-2xl mb-6 leading-relaxed text-cream">
+          Hey there, I'm <span class="font-bold bg-neon-pink text-cream px-2 py-1 border-2 border-cream">Grayson Campbell</span> - the chief loon behind this "massive" operation.
+        </p>
+
+        <p class="text-xl mb-6 leading-relaxed text-cream">
+          I operate at the intersection of Product, Engineering, and Marketing - with a rare ability to shift from C-level strategy to hands-on coding at a moment's notice. Currently building AI-first workflows and high-growth distribution networks as Head of Digital & Growth at <a href="https://www.papercut.com" target="_blank" rel="noopener" class="underline font-bold hover:bg-neon-pink hover:text-cream px-1 transition-colors">PaperCut</a>.
+        </p>
+
+        <p class="text-xl mb-6 leading-relaxed text-cream">
+          I have a disturbing ability with stitching things together that probably shouldn't work - making tools talk to each other in ways they weren't designed for, automating workflows people said were "too complex," and building growth marketing tools that give small teams superpowers.
+        </p>
+
+        <p class="text-xl mb-8 leading-relaxed text-cream">
+          If someone tells me "that's not how it's supposed to work," I take it as a challenge. The tools I build are for people who want to grow their business and do things differently, who refuse to put things in the too hard basket. They can and will find a way to make things happen. Love you folks.
+        </p>
+
+        <div class="flex justify-center">
+          <a href="https://www.linkedin.com/in/graysoncampbell/" target="_blank" rel="noopener" class="box-brutal bg-electric-blue text-cream px-8 py-4 text-xl font-bold inline-flex items-center gap-3">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-charcoal px-6">
+    <div class="container mx-auto max-w-6xl text-center">
+      <div class="flex items-center justify-center gap-4 mb-6">
+        <img src="/images/loonshoot-logo.png" alt="Loonshoot Logo" class="h-10 w-auto" />
+        <h2 class="text-4xl font-bold text-neon-yellow">loonshoot.</h2>
+      </div>
+
+      <p class="text-cream font-mono mb-2">Copyright © Loon Shoot PTY LTD 2025</p>
+      <p class="text-cream font-mono text-sm mb-4 flex items-center justify-center gap-2">
+        <svg class="w-4 h-4 text-neon-pink" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+        from Geelong, Australia
+      </p>
+
+      <div class="mt-8">
+        <p class="text-neon-pink font-mono text-lg font-bold">
+          Building the impossible. Making it happen. 🚀
+        </p>
+      </div>
+    </div>
+  </footer>
+</Layout>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
