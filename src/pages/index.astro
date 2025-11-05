@@ -133,26 +133,26 @@ import Layout from '../layouts/Layout.astro';
           <p class="text-cream">AI models, predictions, and intelligent systems that actually make sense.</p>
         </div>
 
-        <!-- Data & Analytics -->
+        <!-- Data, Analytics & Integration -->
         <div class="box-wonky bg-dark p-6">
           <div class="mb-4">
             <svg class="w-16 h-16 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
             </svg>
           </div>
-          <h3 class="text-2xl font-bold mb-3 text-shadow-chunky text-cream">Data & Analytics</h3>
+          <h3 class="text-2xl font-bold mb-3 text-shadow-chunky text-cream">Data, Analytics & Integration</h3>
           <p class="text-cream">Data warehouses, pipelines, and dashboards that reveal the truth.</p>
         </div>
 
-        <!-- Integration -->
+        <!-- Growth Marketing -->
         <div class="box-brutal bg-dark p-6 rotate-slight">
           <div class="mb-4">
             <svg class="w-16 h-16 text-neon-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
             </svg>
           </div>
-          <h3 class="text-2xl font-bold mb-3 text-shadow-chunky text-cream">Integration</h3>
-          <p class="text-cream">Connect your systems, sync your data, unify your chaos.</p>
+          <h3 class="text-2xl font-bold mb-3 text-shadow-chunky text-cream">Growth Marketing</h3>
+          <p class="text-cream">Finding what it takes to move the dial in your business, improve performance or grow the pie.</p>
         </div>
 
         <!-- Strategy -->
@@ -205,6 +205,67 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-neon-cyan pattern-grid px-6">
+    <div class="container mx-auto max-w-3xl">
+      <h2 class="text-5xl md:text-7xl font-bold mb-12 text-shadow-thick text-dark">
+        Get in Touch
+      </h2>
+
+      <div class="box-brutal bg-cream p-8 md:p-12">
+        <form id="contact-form" method="post" name="contact">
+          <div id="form-message" class="mb-4 p-4 rounded-md hidden"></div>
+
+          <p class="my-3">
+            <label class="text-xl font-bold text-dark">Your Name:</label>
+          </p>
+          <p class="my-3">
+            <input
+              type="text"
+              name="name"
+              required
+              class="p-2 border-solid border-5 border-dark rounded-md shadow-xl text-xl w-full"
+            />
+          </p>
+
+          <p class="my-3">
+            <label class="text-xl font-bold text-dark">Your Email:</label>
+          </p>
+          <p class="my-3">
+            <input
+              type="email"
+              name="email"
+              required
+              class="p-2 border-solid border-5 border-dark rounded-md shadow-xl text-xl w-full"
+            />
+          </p>
+
+          <p class="my-3">
+            <label class="text-xl font-bold text-dark">Message:</label>
+          </p>
+          <p class="mb-0">
+            <textarea
+              name="message"
+              rows="5"
+              required
+              class="p-2 border-solid border-5 border-dark rounded-md shadow-xl text-xl w-full resize-none"
+            ></textarea>
+          </p>
+
+          <p class="mt-0">
+            <button
+              type="submit"
+              id="submit-button"
+              class="underline underline-offset-2 mt-6 text-3xl font-bold text-dark hover:text-neon-pink transition-colors"
+            >
+              Send
+            </button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="py-12 bg-charcoal px-6">
     <div class="container mx-auto max-w-6xl text-center">
@@ -229,6 +290,48 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </footer>
 </Layout>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const submitButton = document.getElementById('submit-button') as HTMLButtonElement;
+  const formMessage = document.getElementById('form-message') as HTMLDivElement;
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Disable submit button
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';
+
+    try {
+      const formData = new FormData(form);
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Success
+        formMessage.textContent = 'Thanks! Your message has been sent successfully.';
+        formMessage.className = 'mb-4 p-4 rounded-md bg-neon-green text-dark font-bold';
+        form.reset();
+      } else {
+        // Error
+        formMessage.textContent = data.error || 'Something went wrong. Please try again.';
+        formMessage.className = 'mb-4 p-4 rounded-md bg-neon-pink text-cream font-bold';
+      }
+    } catch (error) {
+      formMessage.textContent = 'Failed to send message. Please try again later.';
+      formMessage.className = 'mb-4 p-4 rounded-md bg-neon-pink text-cream font-bold';
+    } finally {
+      // Re-enable submit button
+      submitButton.disabled = false;
+      submitButton.textContent = 'Send';
+    }
+  });
+</script>
 
 <style>
   html {
